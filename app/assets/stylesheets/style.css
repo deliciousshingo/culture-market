@@ -48,8 +48,9 @@ header {
   position: absolute;
   top: 80px;
   left: 400px;
-  background-color: #f0f0f0;
+  background-color: #EEEEEE;
   border-radius: 4px;
+  opacity: 0.9;
 }
 
 .user_nav {
