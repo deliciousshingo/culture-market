@@ -10,6 +10,57 @@
   </head>
 
   <body>
+  <header>
+      <div class="heading">
+        <h1 class="title"><a href="/">CultureMarket</a></h1>
+      </div>
+        <div class="navbar">
+          <ul class="nav-lists">
+            <li class="color-gray" id="fitness">Fitness</li>
+             <div class="fitness-lists hidden" id="pull-down">
+              <p class="pull-down-list">Dance</p>
+              <p class="pull-down-list">Yoga</p>
+              <p class="pull-down-list">Workout</p>
+            </div>
+            <li>Lerning</li>
+            <li>Art</li>
+            <li>Business</li>
+          </ul>
+        </div>
+       
+        <%# <% if user_signed_in? %>
+          <div class="user_nav">
+             <%# <span><%= current_user.nickname %>
+            <div class="user_info">
+              <div class="mypage">
+                <%= link_to "マイページ", class: "mypage" %>
+              </div>
+              <div class="logout">
+                <%= link_to "ログアウト", class: "logout" %>
+              </div>
+            </div>
+          </span>
+            <%# <%= link_to "投稿する", class: "post" %>
+          </div>
+          <%# <% else %>
+            <%# <div class="user_info">
+            <div class="login">
+              <%# <%= link_to "ログイン" class: "login" %>
+            <%# </div>
+            <div class="signup"> %>
+              <%# <%= link_to "新規登録" class: "signup" %> 
+            <%# </div>
+            </div> %>
+          <%# <% end %> 
+      </div>
+    </header>
     <%= yield %>
+    <div class="footer">
+     <footer>
+      <p>
+        Copyright CultureMarket 2020.
+      </p>
+    </footer>
+    </div>
   </body>
 </html>
