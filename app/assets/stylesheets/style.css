@@ -4,11 +4,17 @@ body {
   color: #333;
   margin: 0 auto;
 }
-h1,h2,h3,h4,h5,h6,p,a {
+h1 {
+  font-size: 30px;
+  font-weight: bold;
   padding: 5px 0;
   margin: 0;
   color: #333;
-  text-decoration: none;
+}
+
+a {
+  font-size: 15px;
+  color: #555555;
 }
 
 ul,li {
@@ -66,7 +72,7 @@ header {
 
 .mypage {
   padding: 10px;
-  border: 2px solid #333;
+  border: 2px solid #555555;
   border-radius: 5px;
 }
 .mypage:hover {
@@ -76,8 +82,9 @@ header {
 
 .logout {
   padding: 10px;
-  border: 2px solid #333;
+  border: 2px solid #555555;
   border-radius: 5px;
+  margin-left: 10px;
 }
 .logout:hover {
   background-color: #D7EEFF; 
@@ -85,8 +92,9 @@ header {
 }
 .login {
   padding: 10px;
-  border: 2px solid #333;
+  border: 2px solid #555555;
   border-radius: 5px;
+  margin-right: 10px;
 }
 .login:hover {
   background-color: #D7EEFF; 
@@ -94,7 +102,7 @@ header {
 }
 .signup {
   padding: 10px;
-  border: 2px solid #333;
+  border: 2px solid #555555;
   border-radius: 5px;
 }
 .signup:hover {
@@ -108,6 +116,7 @@ header {
 
 .footer {
   height:80px;
+  width: 100%;
   background-color: #C2EEFF;
 }
 

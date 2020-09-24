@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
      <link rel="stylesheet" href="assets/style.css">
   </head>
-  <body>
-   <div class="main"> 
-    <div class="main-image">
-    <img src="assets/culture.png" alt="homeimage" width= 100%>
-    </div>
+  <div class="container">
+    <%= render "devise/shared/header" %>
+    <body>
+      <div class="main"> 
+        <div class="main-image">
+          <img src="assets/culture.png" alt="homeimage" width= 100%>
+        </div>
+      </div>
+      <footer>
+      <%= render "devise/shared/footer" %>
+    </footer>
+    </body>
   </div>
-  </body>
 </html>
-
+ 
 
 
 
