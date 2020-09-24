@@ -3,17 +3,18 @@
   padding: 0px;
   text-decoration: none;
 }
-.box {
+
+.registraion-box {
   width: 350px;
-  height: 115vh;
+  height: 112vh;
   margin: 60px auto 0;
 }
 
-.box-inner {
+.registraion-box-inner {
   padding: 20px 26px;
 }
 
-h2 {
+.registraion-box h2 {
   font-weight: bold;
   font-size: 35px;
   line-height: 1.2;
@@ -23,31 +24,31 @@ h2 {
   text-align: center;
 }
 
-.box-name {
+.registraion-box-name {
   margin: 10px 0px 20px;
 }
 
-.box-first-name {
+.registraion-box-first-name {
   margin: 20px 0px 20px;
 }
 
-.box-last-name {
+.registraion-box-last-name {
   margin: 20px 0px 20px;
 }
 
-.box-email {
+.registraion-box-email {
   margin: 40px 0px 30px;
 }
 
-.box-password {
+.registraion-box-password {
   margin-bottom: 30px;
 }
 
-.box-password-confirmation {
+.registraion-box-password-confirmation {
   margin-bottom: 30px;
 }
 
-.box-profile {
+.registraion-box-profile {
   margin-bottom: 30px;
 }
 
@@ -60,17 +61,17 @@ h2 {
   font-size: 13px;
 }
 
-.box-email label, .box-password label, .box-name label,
- .box-first-name label, .box-last-name label, .box-password-confirmation label
- , .box-profile label{
+.registraion-box-email label, .registraion-box-password label, .registraion-box-name label,
+ .registraion-box-first-name label, .registraion-box-last-name label, .registraion-box-password-confirmation label
+ , .registraion-box-profile label{
   font-weight: 700;
   font-size: 13px;
   padding-left: 2px;
   padding-bottom: 2px;
 }
 
-.box-email input[type="email"], .box-password input[type="password"], .box-name input[type="text"]
-, .box-first-name input[type="text"], .box-last-name input[type="text"], .box-password-confirmation input[type="password"] {
+.registraion-box-email input[type="email"], .registraion-box-password input[type="password"], .registraion-box-name input[type="text"]
+, .registraion-box-first-name input[type="text"], .registraion-box-last-name input[type="text"], .registraion-box-password-confirmation input[type="password"] {
   border-style: none;
   box-sizing: border-box;
   width: 100%;
@@ -81,8 +82,6 @@ h2 {
   padding: 0 7px;
 }
 
-
-
 .column-left {
   float: left;
 }
@@ -91,15 +90,15 @@ h2 {
   float: right;
 }
 
-.box-password a {
+.registraion-box-password a {
   font-size: 13px;
 }
 
-.box-signup {
+.registraion-box-signup {
   margin-bottom: 40px;
 }
 
-.box-signup input[type="submit"] {
+.registraion-box-signup input[type="submit"] {
   border-style: none;
   width: 100%;
   height: 31px;
@@ -108,10 +107,8 @@ h2 {
   border: 1px #a88734 solid;
 }
 
-.box-signup input[type="submit"]:hover {
+.registraion-box-signup input[type="submit"]:hover {
   cursor: pointer;
   background: #f0c14b;
 }
-
-
 

@@ -1,33 +1,33 @@
 <%= render "devise/shared/header" %>
 
-<div class="box">
-  <div class="box-innner">
+<div class="registraion-box">
+  <div class="registraion-box-innner">
     <h2>新規登録</h2>
 
     <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
-      <div class="box-name">
+      <div class="registraion-box-name">
         <%= f.label :name %><br />
         <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
       </div>
 
-      <div class="box-first-name">
+      <div class="registraion-box-first-name">
         <%= f.label :first_name %><br />
         <%= f.text_field :first_name, autofocus: true, autocomplete: "first-name" %>
       </div>
 
-      <div class="box-last-name">
+      <div class="registraion-box-last-name">
         <%= f.label :last_name %><br />
         <%= f.text_field :last_name, autofocus: true, autocomplete: "last-name" %>
       </div>
 
-      <div class="box-email">
+      <div class="registraion-box-email">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
       </div>
 
-      <div class="box-password">
+      <div class="registraion-box-password">
         <%= f.label :password %>
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -35,12 +35,12 @@
         <%= f.password_field :password, autocomplete: "new-password" %>
       </div>
 
-      <div class="box-password-confirmation">
+      <div class="registraion-box-password-confirmation">
         <%= f.label :password_confirmation %><br />
         <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
       </div>
 
-      <div class="box-profile">
+      <div class="registraion-box-profile">
         <%= f.label :profile %><br />
         <%= f.text_area :profile, autofocus: true, autocomplete: "profile", size: "41x5" %>
       </div>
@@ -57,13 +57,11 @@
         </div>
       </div>
 
-      <div class="box-signup">
+      <div class="registraion-box-signup">
         <%= f.submit "Sign up" %>
       </div>
     <% end %>
   </div>
 </div>
  <%= render "devise/shared/footer" %>
-
- 
  
