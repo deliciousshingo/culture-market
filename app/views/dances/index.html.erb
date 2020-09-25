@@ -1,0 +1,47 @@
+<div class="dance-container">
+  <%= render "devise/shared/header" %>
+  <body>
+    <div class="dance-main"> 
+      <div class="dance-main-image">
+        <img src="assets/dance.jpeg" alt="danceimage" width= 100%>
+      </div>
+    </div>
+
+    <div class='dance-contents'>
+      <h2 class='title'>ピックアップカテゴリー</h2>
+      <%= link_to '新規投稿', "#", class: "subtitle" %>
+      <ul class='dance-lists'>
+
+        <% @dances.each do |dance| %>
+          <li class='list'>
+            <%= link_to "#" do %>
+            
+              <div class='dance-img-content'>
+                <%= image_tag dance.image, class: "dance-img" if dance.image.attached? %>
+              </div>
+
+              <div class='dance-info'>
+                <h3 class='dance-name'>
+                  <%= dance.title %>
+                </h3>
+                <div class='dance-price'>
+                  <span><%= dance.price %>円<br>(税込み)</span>
+                </div>
+              </div>
+            <% end%>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class='purchase-btn'>
+      <%= link_to new_dance_path do %>
+      <span class= "purchase-btn-text">エントリーする</span>
+        <%= image_tag 'dancer.jpeg' , size: '185x50' ,class: "purchase-btn-icon" %>
+      <% end %>
+    </div>
+    <footer>
+      <%= render "devise/shared/footer" %>
+    </footer>
+  </body>
+</div>
