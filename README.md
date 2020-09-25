@@ -49,11 +49,11 @@ Things you may want to cover:
 
 | Column | Type   | Options     |
 | ------ | ------ | ----------- |
-| title   | string | null: false |
+| title   | string | null: false |  
 | genre_id | integer | null: false |
 | price   | integer | null: false |
 | introduce   | text | null: false | 
-| reservation_time | time | null: false |  
+| reservation_time | datetime | null: false |  
 | user  | references | null: false, foreign_key: true |
 
 ### Association

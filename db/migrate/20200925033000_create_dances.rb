@@ -5,7 +5,7 @@ class CreateDances < ActiveRecord::Migration[6.0]
       t.integer :genre_id, null: false
       t.integer :price, null: false
       t.text :introduce, null: false
-      t.time :reservation_time, null: false
+      t.datetime :reservation_time, null: false
       t.references :user, foreign_key: true
       t.timestamps
     end
