@@ -59,6 +59,10 @@ header {
   opacity: 0.9;
 }
 
+.pull-down-list {
+  margin-bottom: 15px;
+}
+
 .user_nav {
   width: 20%;
 }
