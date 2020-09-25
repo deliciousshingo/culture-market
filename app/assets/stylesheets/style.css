@@ -72,8 +72,6 @@ header {
 
 .mypage {
   padding: 10px;
-  border: 2px solid #555555;
-  border-radius: 5px;
 }
 .mypage:hover {
   background-color: #D7EEFF; 
