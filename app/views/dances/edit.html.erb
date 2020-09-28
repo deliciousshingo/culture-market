@@ -1,0 +1,21 @@
+<%= render "devise/shared/header" %>
+<div class="dances-sell-contents">
+  <div class="dances-sell-main">
+    <h2 class="dances-sell-title">エントリーの情報を入力</h2>
+    <%= form_with model: @dance, url: dance_path(@dance.id), local: true do |f| %>
+
+     <%= render "devise/shared/error_messages", resource: f.object %>
+     
+    <%= render partial: "form", locals: { f: f} %>
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "変更する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+  <%= render "devise/shared/footer" %>
+</div>

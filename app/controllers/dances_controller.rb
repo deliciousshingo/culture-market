@@ -1,6 +1,8 @@
 class DancesController < ApplicationController
+  before_action :set_dance, only: [:show, :edit, :update, :destroy]
+
   def index
-    @dances = Dance.all
+    @dances = Dance.all.order("created_at DESC")
   end
 
   def new
@@ -8,37 +10,41 @@ class DancesController < ApplicationController
   end
 
   def create
-    @dance = Dance.create(dance_params)
+    @dance = Dance.new(dance_params)
     if @dance.save
       redirect_to dances_path
     else
       render 'new'
     end
+  end
 
     def show
-      @dance = Dance.find(params[:id])
     end
 
     def edit
-      @dance = Dance.find(params[:id])
     end
 
     def update
+      if @dance.update(dance_params)
+        redirect_to dance_path(@dance.id)
+      else
+        render 'edit'
+      end
     end
 
     def destroy
-      @dance = Dance.find(params[:id])
       if @dance.destroy
-        redirect_to root_path
+        redirect_to dances_path
       end
     end
-    
 
-  end
-
-  private
+    private
 
   def dance_params
     params.require(:dance).permit(:title, :price, :genre_id, :image, :introduce, :reservation_time).merge(user: current_user)
+  end
+
+  def set_dance
+    @dance = Dance.find(params[:id])
   end
 end
