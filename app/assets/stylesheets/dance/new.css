@@ -12,7 +12,7 @@
 .dances-sell-main {
   background-color: #FFF;
   width: 35vw;
-  height: 125vh;
+  min-height: 100vh;
   min-width: 300px;
   padding: 10vh 15vw;
 }
