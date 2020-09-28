@@ -1,0 +1,76 @@
+<%= render "devise/shared/header" %>
+
+<div class="dance-show">
+  <div class="dance-box">
+    <h2 class="name">
+      <%= @dance.title %>
+    </h2>
+    <div class='dance-img-content'>
+      <%= image_tag @dance.image, class:"dance-box-img" %>
+      
+    </div>
+    <div class="dance-price-box">
+      <span class="dance-price">
+        ¥ <%= @dance.price %>
+      </span>
+      <span class="dance-postage">
+        (税込) 送料込み
+      </span>
+    </div>
+    
+    <% if user_signed_in? && current_user.id == @dance.user_id %>
+    <%= link_to '商品の編集', edit_dance_path(@dance.id), method: :get, class: "dance-edit-btn" %>
+    <p class='or-text'>or</p>
+    <%= link_to '削除', dance_path(@dance.id), method: :delete, class:'dance-destroy' %>
+    <%# <% else %> %>
+    <%# <% if @dance.order == nil %> %>
+    <%# <%= link_to '購入画面に進む', item_orders_path(@dance.id) ,class:"item-red-btn"%> %>
+    <%# <% end %> %>
+    <% end %>
+
+    <div class="dance-explain-box">
+      <span><%= @dance.introduce %></span>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-dance">エントリー者</th>
+          <td class="detail-value"><%= @dance.user.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-dance">カテゴリー</th>
+          <td class="detail-value"><%= @dance.genre.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-dance">開始時間</th>
+          <td class="detail-value"><%= @dance.reservation_time.strftime('%Y/%m/%d %H:%M') %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="comment-box">
+    <form>
+      <textarea class="comment-text"></textarea>
+      <p class="comment-warn">
+        ○○○○○○○○○○○○○
+        <br>
+        ○○○○○○○○○○○○○
+      </p>
+      <button type="submit" class="comment-btn">
+        <span>コメントする<span>
+      </button>
+    </form>
+  </div>
+  <div class="links">
+    <a href="#" class="change-dance-btn">
+      ＜ 前のエントリー
+    </a>
+    <a href="#" class="change-dance-btn">
+      後ろのエントリー ＞
+    </a>
+  </div>
+  <a href="#" class='another-dance'><%= "他のエントリー" %>をもっと見る</a>
+</div>
+
+<%= render "devise/shared/footer" %>
