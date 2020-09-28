@@ -14,6 +14,26 @@ class DancesController < ApplicationController
     else
       render 'new'
     end
+
+    def show
+      @dance = Dance.find(params[:id])
+    end
+
+    def edit
+      @dance = Dance.find(params[:id])
+    end
+
+    def update
+    end
+
+    def destroy
+      @dance = Dance.find(params[:id])
+      if @dance.destroy
+        redirect_to root_path
+      end
+    end
+    
+
   end
 
   private
