@@ -25,7 +25,7 @@ RSpec.describe Dance, type: :model do
       it 'introduceが空だと登録できないこと' do
         @dance.introduce = ''
         @dance.valid?
-        expect(@dance.errors.full_messages).to include  
+        expect(@dance.errors.full_messages).to include
       end
       it 'genreを選択していないと登録できないこと' do
         @dance.genre_id = 0
@@ -33,7 +33,7 @@ RSpec.describe Dance, type: :model do
         expect(@dance.errors.full_messages).to include("Genre can't be blank")
       end
       it 'reservation_timeを選択していないと登録できないこと' do
-        @dance.reservation_time = ""
+        @dance.reservation_time = ''
         @dance.valid?
         expect(@dance.errors.full_messages).to include("Reservation time can't be blank")
       end

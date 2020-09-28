@@ -1,5 +1,4 @@
 class DancesController < ApplicationController
-  
   def index
     @dances = Dance.all
   end
@@ -22,5 +21,4 @@ class DancesController < ApplicationController
   def dance_params
     params.require(:dance).permit(:title, :price, :genre_id, :image, :introduce, :reservation_time).merge(user: current_user)
   end
-
 end
